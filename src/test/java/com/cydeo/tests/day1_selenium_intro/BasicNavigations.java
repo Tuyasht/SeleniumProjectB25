@@ -18,6 +18,9 @@ public class BasicNavigations {
     // This line will maximize the browser size
     driver.manage().window().maximize();
 
+    // same as maximize ,sometimes doesn't work windows
+    driver.manage().window().fullscreen();
+
     // 3. Go to "https://www.tesla.com"
     driver.get("https://www.tesla.com");
 
@@ -63,6 +66,12 @@ public class BasicNavigations {
         currentURL = driver.getCurrentUrl();
 
         System.out.println("currentURL = " + currentURL);
+
+        // this will close the currently opened window
+        driver.close();
+
+        // this will close all the opened windows
+        driver.quit();
 
 
 
